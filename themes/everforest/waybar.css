@@ -1,0 +1,11 @@
+@define-color background-dim        #293136;
+@define-color background-one        #2E383C;
+@define-color background-blue       #384B55;
+@define-color foreground-highlight  #FAEDCD;
+@define-color foreground-red        #E67E80;
+@define-color foreground-yellow     #DBBC7F;
+
+* {
+    font-family: FontAwesome, Cantarell, IBM Plex, sans-serif;
+    color: @foreground-highlight;
+}

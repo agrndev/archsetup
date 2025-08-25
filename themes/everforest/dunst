@@ -1,0 +1,64 @@
+[global]
+    font = "Font Awesome 5 Free Regular 14, Cantarell 12"
+    allow_markup = yes
+    markup = yes
+    format = "<b>%s</b>\n%b"
+    sort = yes
+    indicate_hidden = yes
+    bounce_freq = 0
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = false
+    origin = top-right
+    transparency = 0
+    idle_threshold = 120
+    monitor = 0
+    follow = mouse
+    sticky_history = yes
+    line_height = 0
+    separator_height = 2
+    padding = 12
+    horizontal_padding = 12
+    startup_notification = false
+    frame_color = "#FAEDCD"
+    frame_width = 1
+    width = 400
+    progress_bar_max_width = 400
+    progress_bar_min_width = 400
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_corner_radius = 5
+    scale = 1
+    min_icon_size = 64
+    max_icon_size = 64
+    alignment = center
+    vertical_alignment = center
+
+[play_sound]
+    summary = "*"
+    script = ~/.scripts/alert.sh
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#131519"
+    foreground = "#D3C6AA"
+    highlight = "#D3C6AA"
+    timeout = 5
+
+[urgency_normal]
+    background = "#131519"
+    foreground = "#D3C6AA"
+    highlight = "#D3C6AA"
+    timeout = 20
+
+[urgency_critical]
+    background = "#131519"
+    foreground = "#D36CAA"
+    highlight = "#D36CAA"
+    timeout = 0
+

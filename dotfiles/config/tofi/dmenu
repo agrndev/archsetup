@@ -1,0 +1,14 @@
+include=../themes/current/files/tofi-dmenu
+
+prompt-text = ""
+
+width = 50%
+height = 50%
+border-width = 2
+outline-width = 0
+
+result-spacing = 20
+num-results = 10
+
+fuzzy-match = true
+hide-cursor = true

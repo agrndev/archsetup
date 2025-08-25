@@ -1,0 +1,95 @@
+@import "../themes/current/files/waybar.css";
+
+* {
+    font-size: 18px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar>box {
+    padding: 4px 6px;
+}
+
+tooltip {
+    background: @background-one;
+    border: 1px solid @background-blue;
+}
+
+#tray,
+#language,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#battery {
+    padding: 0 8px;
+}
+
+#workspaces {
+    padding-left: 9px;
+    padding-right: 6px;
+    border-radius: 40px;
+    background-color: @background-dim;
+}
+
+#workspaces button {
+    padding: 0 2px 0 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+#custom-media {
+    margin-left: 12px;
+    padding: 0 8px;
+    border-radius: 40px;  
+    background-color: @foreground-highlight;
+    color: @background-dim;
+}
+
+#clock {
+    font-family: IBM Plex;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#custom-lock,
+#custom-reboot,
+#custom-power {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 14px;
+    background-color: @background-dim;
+}
+
+/*left border*/
+#custom-lock {
+    border-radius: 26px 0px 0px 26px;
+    margin-left: 16px; /*distancing left icons icons*/
+}
+
+/*right border*/
+#custom-power {
+    border-radius: 0px 26px 26px 0px;
+}
+
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-lock:hover,
+#custom-reboot:hover,
+#custom-power:hover {
+    border-bottom: 1px solid @foreground-highlight;
+    transition: ease-in 0.2s;
+}
+
+#battery.charging {
+   color: @foreground-yellow;
+}
+
+#battery.warning:not(.charging),
+#battery.critical:not(.charging){
+    color: @foreground-red;
+}
