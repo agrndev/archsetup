@@ -1,0 +1,128 @@
+{
+    "height": 24,
+    "spacing": 0,
+
+    "modules-left": [
+      "hyprland/workspaces",
+      "custom/media"
+    ],
+
+    "modules-center": [
+      "clock"
+    ],
+    
+    "modules-right": [
+      "tray",
+      "hyprland/language",
+      "pulseaudio#output",
+      "pulseaudio#input",
+      "battery",
+      "custom/lock",
+      "custom/reboot",
+      "custom/power"
+    ],
+
+    "custom/media": {
+      "format": "{icon} {0}",
+      "format-icons": {
+        "spotify": "",
+        "default": " "
+      },
+      "escape": true,
+      "return-type": "json",
+      "max-length": 40,
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl stop",
+      "exec": "~/.scripts/waybar_media.py 2> /dev/null",
+    },
+
+    "hyprland/language":{
+      "format": "{short}"
+    },
+
+    "tray": {
+      "spacing": 10,
+      "reverse-direction": true 
+    },
+
+    "clock": {
+      "format": "{:%H:%M}",
+      "format-alt": "{:%d/%m/%Y}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "battery": {
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{icon}",
+      "format-charging": "",
+      "format-plugged": "",
+      "format-full": "",
+      "format-icons": ["", "", "", "", ""],
+      "tooltip-format": "Battery: {capacity}%\nRemaining time: {time}"
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "network": {
+      "format-wifi": " ",
+      "format-ethernet": "",
+      "format-disconnected": "⚠",
+      "tooltip-format-wifi": "{essid} [{frequency}g] ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+      "tooltip-format-disconnected": "No internet connection.",
+      "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio#input": {
+      "format-source": "",
+    	"format-source-muted": " ",
+      "format": "{format_source}",
+    	"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+      "tooltip-format": "mute/unmute"
+    },
+
+    "pulseaudio#output": {
+    	"format": "{icon}",
+    	"format-muted": "󰝟",
+    	"format-icons": {
+        "default": ["", "", " "]
+      },
+    	"scroll-step": 2,
+    	"smooth-scrolling-threshold": 1,
+      "max-volume": "300",
+      "on-click-right": "pavucontrol",
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "tooltip-format": "{volume}%"
+    },
+
+    "custom/lock":{
+      "format": "",
+      "tooltip-format": "lock",
+      "on-click": "hyprlock"
+    },
+
+    "custom/reboot":{
+      "format": "",
+      "tooltip-format": "reboot",
+      "on-click": "reboot"
+    },
+
+    "custom/power": {
+        "format" : "",
+      "tooltip-format": "shutdown",
+      "on-click": "shutdown now"
+    }
+    
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Set Mute Microphone button
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/setkeycodes 66 150
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
