@@ -41,6 +41,8 @@ mkdir -p $CURRENT_PATH
 ln -snf "${DESTINATION_THEMES_PATH}/everforest" "${CURRENT_PATH}/files"
 ln -snf "${DESTINATION_THEMES_PATH}/everforest/wallpapers/1.jpg" "${CURRENT_PATH}/wallpaper"
 
+nwg-look -a everforest
+
 mkdir -p ~/.config/nvim/lua/plugins
 ln -snf "${CURRENT_PATH}/files/nvim.lua" ~/.config/nvim/lua/plugins/theme.lua
 
