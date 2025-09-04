@@ -20,23 +20,17 @@ send_notification() {
   "$(get_icon)    $brightness"
 }
 
-play_sound() {
-  ~/.scripts/alert.sh
-}
-
 case "$1" in
   up)
     if [[ $(get_percentage) -lt 100 ]]; then
       brightnessctl set "$BRIGHTNESS_STEP+"
       send_notification
-      play_sound
     fi
     ;;
   down)
     if [[ $(get_percentage) -gt 0 ]]; then
       brightnessctl set "$BRIGHTNESS_STEP-"
       send_notification
-      play_sound
     fi
     ;;
 esac
