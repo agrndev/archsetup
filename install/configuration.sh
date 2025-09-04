@@ -22,6 +22,8 @@ cp -R --remove-destination ~/.local/share/archsetup/dotfiles/config/. ~/.config/
 # ------------------------------
 # THEMES
 # ------------------------------
+sudo pacman -S --noconfirm --needed nwg-look
+
 SOURCE_THEMES_PATH=~/.local/share/archsetup/themes
 DESTINATION_THEMES_PATH=~/.config/themes
 
