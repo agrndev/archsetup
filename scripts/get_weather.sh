@@ -7,7 +7,6 @@ get_location() {
 location=$(get_location)
 
 if [[ -z $location ]]; then
-  echo "location not found"
   exit 1
 fi
 
@@ -33,8 +32,8 @@ regex_location=$(echo $location | sed -e 's/ã/a/g' \
 
 weather=$(curl -s wttr.in/${regex_location}?format=1)
 
-if [[ -n $weather ]]; then
-  echo $weather
-else
-  echo "couldn't retrieve wheater data"
+if [[ -z $weather ]]; then
+  exit 1
 fi
+
+echo "$location, $weather"
